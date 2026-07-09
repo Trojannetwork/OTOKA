@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTOKA — Rise and Run</title>
+  <meta name="description" content="An athletics brand born in Kampala, Uganda. Built for runners, by runners.">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/home.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18",
+      "react-dom/client": "https://esm.sh/react-dom@18/client",
+      "three": "https://esm.sh/three@0.160.0",
+      "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.12",
+      "postprocessing": "https://esm.sh/postprocessing@6.33.5",
+      "@react-three/postprocessing": "https://esm.sh/@react-three/postprocessing@2.16.2"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo">OTO<span>KA</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="/gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/running-club.html" class="nav__link">Running Club</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" data-search-toggle aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav__list">
+      <li><a href="/" class="mobile-nav__link">Home</a></li>
+      <li><a href="/gallery.html" class="mobile-nav__link">Gallery</a></li>
+      <li><a href="/about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="/running-club.html" class="mobile-nav__link">Running Club</a></li>
+      <li><a href="/contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero reveal">
+    <div id="hero-dither-root"></div>
+    <div class="hero__content">
+      <h1 class="hero__tagline">Rise,<br><span>Run.</span></h1>
+      <p class="hero__subtitle">OTOKA is a Kampala-born athletics brand. Performance gear, community runs, and a culture that moves.</p>
+      <div class="hero__cta">
+        <a href="/about.html" class="btn btn--outline-light btn--lg">Our Story</a>
+        <a href="/gallery.html" class="btn btn--primary btn--lg">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Teaser -->
+  <section class="brand-teaser reveal">
+    <div class="brand-teaser__inner">
+      <div class="brand-teaser__image skeleton" style="aspect-ratio:4/5;background:var(--color-gray-500)"></div>
+      <div>
+        <div class="brand-teaser__label">Our Story</div>
+        <h2 class="brand-teaser__title">Born on Kampala's Seven Hills</h2>
+        <p class="brand-teaser__text">
+          OTOKA was founded by Otwiine Olweny and Mark Lui — two runners who believed that Kampala's
+          running culture deserved its own voice. We make gear that moves with you, from the red dirt
+          roads of Kololo to the starting line of your next race.
+        </p>
+        <a href="/about.html" class="btn btn--outline-light">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="featured-drops__header">
+        <div>
+          <h2 class="section__title">Gallery</h2>
+          <p class="section__subtitle">OTOKA in motion. Captured on the streets and tracks of Kampala.</p>
+        </div>
+        <a href="/gallery.html">View Full Gallery &rarr;</a>
+      </div>
+      <div class="grid-4">
+        <div class="lookbook__item"><img src="/images/lookbook/lb-1.jpg" alt="Runner at sunrise in Kampala" onerror="this.style.background='var(--color-off-white)';this.style.minHeight='300px'" style="min-height:300px;background:var(--color-off-white)"></div>
+        <div class="lookbook__item"><img src="/images/lookbook/lb-2.jpg" alt="Track session" onerror="this.style.background='var(--color-off-white)';this.style.minHeight='300px'" style="min-height:300px;background:var(--color-off-white)"></div>
+        <div class="lookbook__item"><img src="/images/lookbook/lb-3.jpg" alt="Hill repeats" onerror="this.style.background='var(--color-off-white)';this.style.minHeight='300px'" style="min-height:300px;background:var(--color-off-white)"></div>
+        <div class="lookbook__item"><img src="/images/lookbook/lb-4.jpg" alt="Morning run crew" onerror="this.style.background='var(--color-off-white)';this.style.minHeight='300px'" style="min-height:300px;background:var(--color-off-white)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Running Club Teaser -->
+  <section class="brand-teaser reveal" style="background:var(--color-off-white)">
+    <div class="brand-teaser__inner">
+      <div>
+        <div class="brand-teaser__label" style="color:var(--color-gray-400)">Community</div>
+        <h2 class="brand-teaser__title" style="color:var(--color-black)">OTOKA Running Club</h2>
+        <p class="brand-teaser__text" style="color:var(--color-gray-400)">
+          Community runs, events, and a crew that shows up before sunrise. The OTOKA Running Club
+          is coming soon to Kampala — a space for every runner, from first-timers to veterans.
+        </p>
+        <a href="/running-club.html" class="btn btn--secondary">Coming Soon</a>
+      </div>
+      <div class="brand-teaser__image skeleton" style="aspect-ratio:4/5;background:var(--color-gray-200)"></div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section reveal">
+    <div class="newsletter-section__inner">
+      <h2 class="newsletter-section__title">Stay in the Loop</h2>
+      <p class="newsletter-section__text">Be the first to know about club launches, events, and what's next.</p>
+      <form class="newsletter-section__form" id="home-newsletter">
+        <input type="email" class="newsletter-section__input" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn--primary btn--lg">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">OTO<span>KA</span></div>
+          <p class="footer__tagline">Performance running gear. Kampala, Uganda.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Explore</h4>
+          <div class="footer__links">
+            <a href="/gallery.html">Gallery</a>
+            <a href="/about.html">About</a>
+            <a href="/running-club.html">Running Club</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/faq.html">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Info</h4>
+          <div class="footer__links">
+            <a href="/about.html">Our Story</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="/running-club.html">Running Club</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/faq.html">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Stay Connected</h4>
+          <p class="footer__newsletter-text">Drop your email for the latest.</p>
+          <form class="footer__newsletter-form">
+            <input type="email" class="footer__newsletter-input" placeholder="your@email.com" required>
+            <button type="submit" class="btn btn--primary" style="white-space:nowrap">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2026 OTOKA. All rights reserved.</div>
+        <div class="footer__social">
+          <a href="https://instagram.com/otwiine" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://x.com/Mr_OJO16" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l6.5 8.5M4 20l6.5-8.5M20 4l-6.5 8.5M20 20l-6.5-8.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <button class="search-overlay__close" aria-label="Close search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="search-overlay__inner">
+      <input type="search" class="search-overlay__input" placeholder="Search..." autocomplete="off">
+      <div class="search-overlay__results"></div>
+    </div>
+  </div>
+
+  <script>
+    window.OTOKA = window.OTOKA || {};
+    OTOKA.showToast = function(msg) {
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      requestAnimationFrame(() => t.classList.add('toast--visible'));
+      setTimeout(() => { t.classList.remove('toast--visible'); setTimeout(() => t.remove(), 300); }, 2500);
+    };
+  </script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // Home newsletter — Web3Forms integration (TODO: replace ACCESS_KEY)
+    document.getElementById('home-newsletter')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value.trim();
+      if (!email) return;
+      // TODO: Replace with real Web3Forms access key
+      // fetch('https://api.web3forms.com/submit', { method:'POST', body: new FormData(this) })
+      OTOKA.showToast('Thanks for subscribing!');
+      this.querySelector('input').value = '';
+    });
+  </script>
+  <!-- React Bits: Dither background in hero -->
+  <script type="module" src="/js/mount-hero-dither.js"></script>
+</body>
+</html>

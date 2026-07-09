@@ -1,0 +1,212 @@
+/* ===== Hero — minimal, stark black & white ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: calc(-1 * var(--header-height));
+}
+
+#hero-dither-root {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--color-black);
+  overflow: hidden;
+}
+
+#hero-dither-root canvas {
+  display: block;
+}
+
+.dither-container {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+.hero__tagline {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xl);
+}
+
+.hero__tagline span {
+  font-weight: 100;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 440px;
+  margin-bottom: var(--space-2xl);
+  line-height: 1.6;
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.hero__scroll-hint {
+  display: none;
+}
+
+/* ===== Featured Drops — editorial layout, large images ===== */
+.featured-drops__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-3xl);
+}
+
+.featured-drops__header a {
+  color: var(--color-gray-400);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color var(--transition-fast);
+}
+
+.featured-drops__header a:hover {
+  color: var(--color-black);
+}
+
+/* ===== Brand Story Teaser — clean editorial ===== */
+.brand-teaser {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: var(--space-4xl) 0;
+}
+
+.brand-teaser__inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.brand-teaser__image {
+  aspect-ratio: 4/5;
+  background: var(--color-gray-500);
+}
+
+.brand-teaser__label {
+  font-size: 0.625rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-xl);
+}
+
+.brand-teaser__title {
+  color: var(--color-white);
+  font-weight: 300;
+  margin-bottom: var(--space-xl);
+}
+
+.brand-teaser__text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+}
+
+/* ===== Newsletter Section — black background, stark ===== */
+.newsletter-section {
+  background: var(--color-black);
+  padding: var(--space-4xl) 0;
+  text-align: center;
+}
+
+.newsletter-section__inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+.newsletter-section__title {
+  color: var(--color-white);
+  font-weight: 300;
+  margin-bottom: var(--space-md);
+}
+
+.newsletter-section__text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  margin-bottom: var(--space-2xl);
+  font-weight: 300;
+}
+
+.newsletter-section__form {
+  display: flex;
+  gap: var(--space-md);
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.newsletter-section__input {
+  flex: 1;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--color-white);
+  font-size: 0.9375rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.newsletter-section__input:focus {
+  border-color: var(--color-white);
+}
+
+.newsletter-section__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-section .btn--primary {
+  background: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
+.newsletter-section .btn--primary:hover {
+  background: transparent;
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .brand-teaser__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .newsletter-section__form {
+    flex-direction: column;
+  }
+
+  .hero__subtitle {
+    max-width: 100%;
+  }
+}

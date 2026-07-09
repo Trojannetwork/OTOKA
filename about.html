@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — OTOKA</title>
+  <meta name="description" content="The story behind OTOKA — founded by Otwiine Olweny and Mark Lui in Kampala, Uganda.">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <style>
+    .about-hero { background:var(--color-black); color:var(--color-white); padding:var(--space-4xl) 0; text-align:center; }
+    .about-hero h1 { margin-bottom:var(--space-md); font-weight:300; }
+    .about-hero p { color:rgba(255,255,255,0.5); font-size:1rem; max-width:600px; margin-inline:auto; font-weight:300; }
+    .about-story { padding:var(--space-4xl) 0; }
+    .about-story__grid { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4xl); align-items:center; }
+    .about-story__image { aspect-ratio:4/5; background:var(--color-off-white); }
+    .about-story__text h2 { margin-bottom:var(--space-lg); font-weight:300; }
+    .about-story__text p { color:var(--color-gray-400); font-size:1.0625rem; line-height:1.8; margin-bottom:var(--space-lg); font-weight:300; }
+    .about-values { background:var(--color-off-white); padding:var(--space-4xl) 0; }
+    .about-values__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-2xl); }
+    .about-value { text-align:center; }
+    .about-value__icon { width:48px; height:48px; margin:0 auto var(--space-lg); border:1px solid var(--color-black); display:flex; align-items:center; justify-content:center; }
+    .about-value__icon svg { width:22px; height:22px; stroke:var(--color-black); fill:none; stroke-width:1.5; }
+    .about-value h3 { font-size:1.125rem; margin-bottom:var(--space-sm); font-weight:400; }
+    .about-value p { color:var(--color-gray-400); font-size:0.875rem; font-weight:300; }
+    @media (max-width:768px) {
+      .about-story__grid { grid-template-columns:1fr; }
+      .about-values__grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo">OTO<span>KA</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="/about.html" class="nav__link nav__link--active">About</a></li>
+          <li><a href="/running-club.html" class="nav__link">Running Club</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" data-search-toggle aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li><a href="/" class="mobile-nav__link">Home</a></li>
+      <li><a href="/gallery.html" class="mobile-nav__link">Gallery</a></li>
+      <li><a href="/about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="/running-club.html" class="mobile-nav__link">Running Club</a></li>
+      <li><a href="/contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-hero reveal">
+    <div class="container">
+      <h1>Our Story</h1>
+      <p>Born on the seven hills of Kampala. Built for runners, by runners.</p>
+    </div>
+  </section>
+
+  <section class="about-story reveal">
+    <div class="container">
+      <div class="about-story__grid">
+        <div class="about-story__image skeleton"></div>
+        <div class="about-story__text">
+          <h2>The Spark</h2>
+          <p>OTOKA was founded by Otwiine Olweny and Mark Lui — two runners who saw a gap between the raw energy of Kampala's running scene and the gear available to the athletes powering it.</p>
+          <p>Every morning, before the sun breaks over Lake Victoria, runners fill the streets of Kololo, Nakasero, and beyond. They run the hills. They run the red dirt. They run because it's who they are. OTOKA exists to give that community a brand that speaks their language.</p>
+          <p>Our name draws from the sprint-bar mark — that universal symbol of speed, motion, and momentum. Every piece we make is designed to move with you, whether you're chasing a PR or chasing the sunrise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-values reveal">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">What We Stand For</h2>
+      </div>
+      <div class="about-values__grid">
+        <div class="about-value">
+          <div class="about-value__icon"><svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Performance First</h3>
+          <p>Every seam, every panel, every fabric is chosen to help you move faster and feel better. No compromises.</p>
+        </div>
+        <div class="about-value">
+          <div class="about-value__icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h3>Built in Kampala</h3>
+          <p>Our city shapes everything we do. The hills, the heat, the community — it's all in the DNA of our gear.</p>
+        </div>
+        <div class="about-value">
+          <div class="about-value__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3>Sustainable Speed</h3>
+          <p>We use recycled materials wherever possible. Running gear that respects the planet we run on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div><div class="footer__brand-name">OTO<span>KA</span></div><p class="footer__tagline">Performance running gear. Kampala, Uganda.</p></div>
+        <div>
+          <h4 class="footer__heading">Explore</h4>
+          <div class="footer__links">
+            <a href="/gallery.html">Gallery</a>
+            <a href="/about.html">About</a>
+            <a href="/running-club.html">Running Club</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/faq.html">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Info</h4>
+          <div class="footer__links">
+            <a href="/about.html">Our Story</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="/running-club.html">Running Club</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/faq.html">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Stay Connected</h4>
+          <p class="footer__newsletter-text">Drop your email for the latest.</p>
+          <form class="footer__newsletter-form">
+            <input type="email" class="footer__newsletter-input" placeholder="your@email.com" required>
+            <button type="submit" class="btn btn--primary" style="white-space:nowrap">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2026 OTOKA. All rights reserved.</div>
+        <div class="footer__social">
+          <a href="https://instagram.com/otwiine" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://x.com/Mr_OJO16" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l6.5 8.5M4 20l6.5-8.5M20 4l-6.5 8.5M20 20l-6.5-8.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search-overlay">
+    <button class="search-overlay__close" aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="search-overlay__inner"><input type="search" class="search-overlay__input" placeholder="Search..." autocomplete="off"><div class="search-overlay__results"></div></div>
+  </div>
+
+  <script>window.OTOKA=window.OTOKA||{};OTOKA.showToast=function(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('toast--visible'));setTimeout(()=>{t.classList.remove('toast--visible');setTimeout(()=>t.remove(),300)},2500)}</script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
