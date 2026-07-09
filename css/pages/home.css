@@ -7,24 +7,19 @@
   align-items: center;
   overflow: hidden;
   margin-top: calc(-1 * var(--header-height));
+  background: url('/images/image_1.jpeg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.45);
 }
 
 #hero-dither-root {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: var(--color-black);
-  overflow: hidden;
-}
-
-#hero-dither-root canvas {
-  display: block;
-}
-
-.dither-container {
-  width: 100% !important;
-  height: 100% !important;
-  position: relative;
+  display: none;
 }
 
 .hero__content {
